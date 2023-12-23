@@ -1,0 +1,24 @@
+{
+	"name": "react-express",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "node server.js",
+		"server": "nodemon server.js",
+		"json-server": "json-server --watch db.json -p 8000",
+		"client": "cd client && npm run dev",
+		"dev": "concurrently \"npm run server\" \"npm run client\" \"npm run json-server\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"concurrently": "^8.2.2",
+		"cors": "^2.8.5",
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.2"
+	}
+}
